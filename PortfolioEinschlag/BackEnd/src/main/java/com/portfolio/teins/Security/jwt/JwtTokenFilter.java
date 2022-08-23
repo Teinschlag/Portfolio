@@ -1,3 +1,8 @@
+
+
+
+
+
 package com.portfolio.teins.Security.jwt;
 
 import com.portfolio.teins.Security.Service.UserDetailsImpl;
@@ -15,7 +20,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 public class JwtTokenFilter extends OncePerRequestFilter {
-
     private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
 
     @Autowired
@@ -32,12 +36,12 @@ public class JwtTokenFilter extends OncePerRequestFilter {
                 UserDetails userDetails = userDetailsServiceImpl.loadUserByUsername(nombreUsuario);
                 UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 SecurityContextHolder.getContext().setAuthentication(auth);
-            }
-        } catch (Exception e) {
-            logger.error("El método doFilterInternal ha fallado");
+            } 
+        }  catch (Exception e) {
+                    logger.error("El método doFilterInternal ha fallado");
         }
         filterChain.doFilter(request, response);
-}
+    }
     
     private String getToken(HttpServletRequest request){
         String header = request.getHeader("Authorization");

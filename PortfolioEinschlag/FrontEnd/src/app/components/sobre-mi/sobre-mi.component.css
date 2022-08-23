@@ -11,7 +11,7 @@ div{
     #fotodeperfil{
         position: absolute;
         width: 15%;
-        border-radius: 100%;
+        border-radius:50%;
         box-shadow: 3px 3px 3px grey;
         left: 3%;   
         top: 740px;     

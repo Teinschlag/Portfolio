@@ -47,6 +47,11 @@ public class UsuarioPrincipal implements UserDetails {
         return email;
     }
 
+     @Override
+    public String getUsername() {
+        return nombreUsuario;
+        
+    }    
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -67,9 +72,6 @@ public class UsuarioPrincipal implements UserDetails {
         return true;
     }
 
-    @Override
-    public String getUsername() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 
 }
