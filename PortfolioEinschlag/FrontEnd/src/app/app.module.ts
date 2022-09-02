@@ -19,6 +19,9 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia.component';
 import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia.component';
+import { NuevaEducacionComponent } from './components/educacion/nueva-educacion.component';
+import { EditarEducacionComponent } from "./components/educacion/editar-educacion.component";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +38,8 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
     LoginComponent,
     NuevaExperienciaComponent,
     EditarExperienciaComponent,
+    NuevaEducacionComponent,
+    EditarEducacionComponent
   ],
   imports: [
     BrowserModule,
@@ -42,8 +47,7 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
     BrowserAnimationsModule,
     FormsModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
-
+    HttpClientModule,
   ],   
   providers: [],
   bootstrap: [AppComponent]

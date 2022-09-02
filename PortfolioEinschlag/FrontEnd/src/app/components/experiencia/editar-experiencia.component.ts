@@ -35,5 +35,4 @@ export class EditarExperienciaComponent implements OnInit {
       }
     )
   }
-
 }
