@@ -1,18 +1,19 @@
 <div class="row">
+    <button type="button" class="btn btn-secondary" routerLink="/editsobremi/1" *ngIf="isLogged">
+            Editar persona
+        </button>
+
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/FOTO JPG.jpg" class="img-fluid" id="fotodeperfil">
+        <img src={{Persona.img}} class="img-fluid" id="fotodeperfil">
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p id="nombre">Tomas Einschlag</p>
+        <p id="nombre">{{Persona.nombre}} {{Persona.apellido}}</p>
         <p>Full Stack Developer Jr</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
             <h1>Sobre mi</h1>
-            <p>Soy Licenciado en Comunicación Social, graduado de la Universidad Nacional de La Plata y con experiencia en radio y televisión.
-            He trabajado como vendedor en un local de la marca Lacoste lo que me brindó experiencia en atención al cliente y actualmente realizo tareas administrativas en la 
-            empresa familiar. Desde hace algunos años comencé de forma autodidacta a aprender sobre herramientas de desarrollo front-end y hoy en día estoy cursando
-            el programa #ArgentinaPrograma para obtener mi título de Desarrollador Web FullStack Junior. </p>
+            <p>{{Persona.descripcion}}</p>
         </span>
     </div>
 </div>

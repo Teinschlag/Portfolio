@@ -27,7 +27,7 @@ export class EditarEducacionComponent implements OnInit {
         alert("Error al modificar Educación");
         this.router.navigate(['']);
       }
-    );
+    )
   }
 
   onUpdate(): void {

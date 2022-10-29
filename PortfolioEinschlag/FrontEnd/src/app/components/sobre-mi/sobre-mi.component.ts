@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/Service/persona.service';
+import { TokenService } from 'src/app/Service/token.service';
 
 @Component({
   selector: 'app-sobre-mi',
@@ -6,10 +9,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sobre-mi.component.css']
 })
 export class SobreMiComponent implements OnInit {
+Persona: persona = null;
 
-  constructor() { }
+
+  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
+    this.cargarPersona();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data =>{
+      this.Persona = data}
+      )
+  }
 }
