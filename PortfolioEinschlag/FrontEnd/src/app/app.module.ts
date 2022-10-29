@@ -24,6 +24,9 @@ import { EditarEducacionComponent } from "./components/educacion/editar-educacio
 import { EditSkillComponent } from './components/hys/edit-skill.component';
 import { NewSkillComponent } from './components/hys/new-skill.component';
 import { EditSobreMiComponent } from './components/sobre-mi/edit-sobre-mi.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -54,6 +57,8 @@ import { EditSobreMiComponent } from './components/sobre-mi/edit-sobre-mi.compon
     FormsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
   ],   
   providers: [],
   bootstrap: [AppComponent]
