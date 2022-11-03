@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { persona } from '../model/persona.model';
 
 
@@ -9,7 +10,7 @@ import { persona } from '../model/persona.model';
 })
 
 export class PersonaService {
-  URL = 'http://localhost:8080/personas/';
+  URL = environment.URL + 'personas/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,7 +19,8 @@ export class PersonaService {
   }
 
   public detail(id: number): Observable<persona>{
-    return this.httpClient.get<persona>(this.URL + `detail/${id}`);
+    let response = this.httpClient.get<persona>(this.URL + `detail/${id}`);
+    return response;
   }
 
   /*public save(educacion: Educacion): Observable<any>{

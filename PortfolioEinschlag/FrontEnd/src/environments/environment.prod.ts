@@ -9,5 +9,6 @@ export const environment = {
     messagingSenderId: '473292861450',
     measurementId: 'G-7J9LGW1KSZ',
   },
-  production: true
+  production: true,
+  URL: 'https://bkteins.herokuapp.com/',
 };
