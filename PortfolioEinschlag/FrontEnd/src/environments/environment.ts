@@ -12,6 +12,7 @@ export const environment = {
     authDomain: 'teinsfrontend.firebaseapp.com',
     messagingSenderId: '473292861450',
     measurementId: 'G-7J9LGW1KSZ',
+    URL: 'http://localhost:8080/'
   },
   production: false,
 

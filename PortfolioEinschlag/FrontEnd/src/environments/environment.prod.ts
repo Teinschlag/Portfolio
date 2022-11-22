@@ -11,5 +11,5 @@ export const environment = {
   },
   production: true,
 
-  URL: 'https://bkteins.herokuapp.com/',
+  URL: 'https://teinsbackend.herokuapp.com/',
 };

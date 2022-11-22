@@ -1,6 +1,7 @@
 {
   "storage": {
-    "rules": ".jpg .jpeg .png"
+    "rules": ".jpg .jpeg .png",
+    "bucket": ""
   },
   "hosting": {
     "public": "dist/portfolio-einschlag",
